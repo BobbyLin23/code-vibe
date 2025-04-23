@@ -1,7 +1,7 @@
 ---
 description: 
 globs: 
-alwaysApply: false
+alwaysApply: true
 ---
 # 技术栈指南
 
@@ -10,6 +10,7 @@ alwaysApply: false
 - TypeScript - 强类型JavaScript超集
 - Tailwind CSS v4 - 实用优先的CSS框架
 - Shadcn Vue - 无样式组件库，基于Reka UI
+- Vue Use - 基于Vue的常用工具hooks
 
 ## 数据库与ORM
 - PostgreSQL - 主要数据库(通过Neon提供)
@@ -22,6 +23,10 @@ alwaysApply: false
 - Pinia - 全局状态管理
 - Vue Query - 服务器状态和数据获取
 - 持久化状态使用localStorage或Cookie
+
+## Icons
+- 使用Nuxt Icon
+- 使用iconify的数据
 
 ## 认证与授权
 - Better Auth - 认证框架
