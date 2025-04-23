@@ -1,0 +1,58 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 后端API规则
+
+## API接口设计
+- RESTful风格API设计
+- 端点URL使用kebab-case，如`/api/course-modules`
+- API版本控制：`/api/v1/resource`
+- 统一响应格式：
+  ```typescript
+  {
+    success: boolean;
+    data?: any;
+    error?: {
+      code: string;
+      message: string;
+    }
+  }
+  ```
+
+## 数据库交互
+- 使用Drizzle ORM进行数据库查询
+- 模型定义放在`/server/models`目录
+- 数据库迁移放在`/server/migrations`目录
+- 查询逻辑抽象成服务，放在`/server/services`目录
+
+## 认证与授权
+- 使用Better Auth处理认证流程
+- JWT令牌用于维护会话状态
+- 权限检查中间件用于保护资源
+- 使用HTTPS确保API安全
+
+## Notion API集成
+- Notion API调用封装在专用服务中
+- 缓存频繁请求的Notion内容
+- 实现内容格式转换以适应前端显示
+- 错误处理包括重试机制
+
+## 错误处理
+- 使用try/catch处理异步操作
+- 集中式错误处理中间件
+- 错误日志记录
+- 向客户端返回适当的HTTP状态码
+
+## API处理文件组织
+- `/server/api` - API路由定义
+- `/server/middleware` - 中间件函数
+- `/server/utils` - 工具函数
+- `/server/config` - 配置文件
+
+## 性能考虑
+- 实现响应缓存策略
+- 分页处理大数据集
+- 避免N+1查询问题
+- 长时间运行的操作使用任务队列

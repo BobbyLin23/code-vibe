@@ -1,0 +1,46 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 前端代码风格规则
+
+## Vue组件规范
+- 使用Vue 3 Composition API和`<script setup>`语法
+- 组件名称使用PascalCase命名
+- 单文件组件结构顺序：`<script>`, `<template>`, `<style>`
+- props定义必须包含类型和默认值
+- 使用type定义props类型，而非Vue的PropType
+- 使用`defineEmits`和`defineProps`进行事件和属性定义
+- 注意Nuxt中大部分Vue相关API已经autoImport
+- 注意Nuxt中的autoImport规则
+
+## TypeScript使用规范
+- 为所有变量和函数添加类型注释
+- 使用接口(interface)定义复杂数据结构
+- 避免使用`any`类型，优先使用更精确的类型
+- 对于可能为null或undefined的值使用可选链操作符(?.)
+
+## CSS样式规范
+- 使用Tailwind CSS实用工具类优先
+- 组件特定样式使用scoped CSS
+- 颜色使用Tailwind预设变量，避免硬编码
+- 响应式设计使用Tailwind的断点系统
+
+## 页面组织
+- 页面组件放置在`/pages`目录
+- 公共组件放置在`/components`目录
+- 页面级组件可放在`/components/pages/`子目录下
+- 布局相关组件放在`/layouts`目录
+
+## 状态管理
+- 简单状态使用ref或reactive
+- 跨组件状态使用供给/注入(provide/inject)
+- 复杂全局状态使用Pinia
+- 服务器状态管理使用Vue Query
+
+## 命名约定
+- 变量和函数使用camelCase
+- 可复用的组合函数(composables)使用`use`前缀
+- Boolean类型变量使用`is`或`has`前缀
+- CSS类名使用kebab-case

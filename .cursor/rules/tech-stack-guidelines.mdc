@@ -1,0 +1,55 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 技术栈指南
+
+## 核心技术
+- Nuxt 3 - Vue框架，提供SSR和静态站点生成
+- TypeScript - 强类型JavaScript超集
+- Tailwind CSS v4 - 实用优先的CSS框架
+- Shadcn Vue - 无样式组件库，基于Reka UI
+
+## 数据库与ORM
+- PostgreSQL - 主要数据库(通过Neon提供)
+- Drizzle ORM - TypeScript优先的ORM
+- 数据库模式定义在`/server/models`目录
+- 迁移文件在`/server/migrations`目录
+
+## 状态管理
+- Vue的响应式API - 局部状态管理
+- Pinia - 全局状态管理
+- Vue Query - 服务器状态和数据获取
+- 持久化状态使用localStorage或Cookie
+
+## 认证与授权
+- Better Auth - 认证框架
+- JWT - 无状态会话管理
+- RBAC - 基于角色的访问控制
+- OAuth - 第三方认证集成
+
+## API与集成
+- Notion API - 课程内容管理
+- REST API - 后端通信标准
+- Stripe - 支付处理(如需付费内容)
+- 第三方API通过服务适配器模式集成
+
+## 开发工具
+- pnpm - 包管理器
+- ESLint - 代码质量检查
+- TypeScript - 类型检查
+- Vitest - 单元测试框架
+- Playwright - E2E测试框架
+
+## 部署与DevOps
+- Vercel - 前端部署
+- Docker - 容器化(可选)
+- GitHub Actions - CI/CD
+- 环境变量用于配置管理
+
+## 性能优化
+- 懒加载组件和路由
+- 图片优化与缓存策略
+- 服务器端渲染(SSR)
+- 代码拆分与Tree Shaking

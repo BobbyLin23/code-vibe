@@ -1,0 +1,37 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# CodeVibe 项目结构规则
+
+## 核心文件
+- [app.vue](mdc:app.vue) - Nuxt应用的主入口文件
+- [nuxt.config.ts](mdc:nuxt.config.ts) - Nuxt配置文件
+- [package.json](mdc:package.json) - 项目依赖配置文件
+
+## 目录结构
+- `/server` - 后端服务器代码，包含API路由、数据库连接等
+- `/components` - Vue组件存放目录
+- `/pages` - 页面文件，Nuxt自动生成路由
+- `/public` - 静态资源文件
+- `/composables` - 可复用Vue组合函数
+- `/utils` - 工具函数
+- `/layouts` - 页面布局模板
+- `/assets` - 需要处理的资源(如SCSS、图片等)
+- `/middleware` - Nuxt中间件
+- `/plugins` - Nuxt插件
+
+## 数据流
+- 前端页面通过Nuxt的API访问后端服务
+- Notion API用于获取课程内容
+- Drizzle ORM用于数据库操作
+- Better Auth用于用户认证
+
+## 技术栈约定
+- 使用TypeScript进行类型定义
+- 使用Tailwind CSS v4进行样式设计
+- 使用Shadcn Vue作为UI组件库
+- 使用Vue Query进行数据获取和缓存
+- 使用Neon作为PostgreSQL服务
+- 使用drizzle-orm作为ORM
