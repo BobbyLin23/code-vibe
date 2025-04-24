@@ -1,9 +1,10 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "code-vibe",
   "type": "module",
+  "private": true,
+  "author": "BobbyLin",
   "scripts": {
-    "build": "nuxt build",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

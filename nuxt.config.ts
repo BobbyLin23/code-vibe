@@ -37,6 +37,6 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   nitro: {
-    preset: 'vercel',
+    preset: 'node-server',
   },
 })
