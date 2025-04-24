@@ -36,7 +36,4 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-  nitro: {
-    preset: 'node-server',
-  },
 })
